@@ -1,0 +1,312 @@
+--- 
+bartenderChat: 
+  debug: false
+  format: "<&6>Bartender:<&f> <text>"
+  type: format
+bartender_Inventory: 
+  size: 27
+  slots: 
+    - "[i@beer] [i@pbr] [i@whiskey] [i@scotch] [i@wine] [i@cider] [i@margarita] [i@martini][]"
+    - "[i@shirley_temple] [i@vodka_redbull] [i@long_island_iced_tea] [i@bloody_mary] [i@manhattan] [i@oatmeal_stout] [] [] []"
+    - "[i@cola] [i@grape_drank] [i@orange_fanta] [i@water] [i@pina_colada] [i@moonshine] [] [] []"
+  title: "<&6>Bartender Menu"
+  type: inventory
+bartender_Inventory_Handler: 
+  events: 
+    ? "on player clicks beer in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"4\" { - inventory close - money take quantity:4 - narrate \"<&a>$<&e>4 <&a>has been taken from your balance\" - give beer } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks bloody_mary in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"8\" { - inventory close - money take quantity:8 - narrate \"<&a>$<&e>8 <&a>has been taken from your balance\" - give bloody_mary } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks cider in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"5\" { - inventory close - money take quantity:5 - narrate \"<&a>$<&e>5 <&a>has been taken from your balance\" - give cider } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks cola in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"2\" { - inventory close - money take quantity:2 - narrate \"<&a>$<&e>2 <&a>has been taken from your balance\" - give cola } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks grape_drank in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"2\" { - inventory close - money take quantity:2 - narrate \"<&a>$<&e>2 <&a>has been taken from your balance\" - give grape_drank } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks in bartender_Inventory"
+    : 
+      - "determine cancelled"
+    ? "on player clicks long_island_iced_tea in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"5\" { - inventory close - money take quantity:5 - narrate \"<&a>$<&e>5 <&a>has been taken from your balance\" - give long_island_iced_tea } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks manhattan in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"10\" { - inventory close - money take quantity:10 - narrate \"<&a>$<&e>10 <&a>has been taken from your balance\" - give manhattan } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks margarita in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"6\" { - inventory close - money take quantity:6 - narrate \"<&a>$<&e>6 <&a>has been taken from your balance\" - give margarita } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks martini in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"6\" { - inventory close - money take quantity:6 - narrate \"<&a>$<&e>6 <&a>has been taken from your balance\" - give martini } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks moonshine in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"1\" { - inventory close - money take quantity:1 - narrate \"<&a>$<&e>1 <&a>has been taken from your balance\" - give moonshine } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks oatmeal_stout in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"15\" { - inventory close - money take quantity:15 - narrate \"<&a>$<&e>15 <&a>has been taken from your balance\" - give oatmeal_stout } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks orange_fanta in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"2\" { - inventory close - money take quantity:2 - narrate \"<&a>$<&e>2 <&a>has been taken from your balance\" - give orange_fanta } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks pbr in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"5\" { - inventory close - money take quantity:5 - narrate \"<&a>$<&e>5 <&a>has been taken from your balance\" - give pbr } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks pina_colada in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"5\" { - inventory close - money take quantity:5 - narrate \"<&a>$<&e>5 <&a>has been taken from your balance\" - give pina_colada } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks scotch in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"12\" { - inventory close - money take quantity:12 - narrate \"<&a>$<&e>12 <&a>has been taken from your balance\" - give scotch } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks shirley_temple in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"5\" { - inventory close - money take quantity:5 - narrate \"<&a>$<&e>5 <&a>has been taken from your balance\" - give shirley_temple } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks vodka_redbull in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"4\" { - inventory close - money take quantity:4 - narrate \"<&a>$<&e>4 <&a>has been taken from your balance\" - give vodka_redbull } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks water in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"0\" { - inventory close - money take quantity:0 - narrate \"<&a>$<&e>0 <&a>has been taken from your balance\" - give water } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks water_melon_soda in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"3\" { - inventory close - money take quantity:3 - narrate \"<&a>$<&e>3 <&a>has been taken from your balance\" - give water_melon_soda } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks whiskey in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"10\" { - inventory close - money take quantity:10 - narrate \"<&a>$<&e>10 <&a>has been taken from your balance\" - give whiskey } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player clicks wine in bartender_Inventory"
+    : 
+      - "if <player.money> >= \"14\" { - inventory close - money take quantity:14 - narrate \"<&a>$<&e>14 <&a>has been taken from your balance\" - give wine } else { - inventory close - narrate \"<&c>You do not have enough money!\" }"
+    ? "on player consumes beer"
+    : 
+      - "cast confusion duration:10s"
+    ? "on player consumes bloody_mary"
+    : 
+      - "cast slow duration:50s"
+    ? "on player consumes cider"
+    : 
+      - "cast regeneration duration:10s"
+    ? "on player consumes cola"
+    : 
+      - "cast absorption duration:20s power:1"
+    ? "on player consumes grape_drank"
+    : 
+      - "cast absorption duration:20s power:1"
+    ? "on player consumes long_island_iced_tea"
+    : 
+      - "cast confusion duration:10s"
+    ? "on player consumes martini"
+    : 
+      - "cast confusion duration:10s"
+    ? "on player consumes moonshine"
+    : 
+      - "cast blindness duration:55s"
+    ? "on player consumes oatmeal_stout"
+    : 
+      - "cast saturation duration:90s"
+    ? "on player consumes orange_fanta"
+    : 
+      - "cast absorption duration:20s power:1"
+    ? "on player consumes pbr"
+    : 
+      - "cast confusion duration:10s"
+    ? "on player consumes pina_colada"
+    : 
+      - "cast confusion duration:10s"
+    ? "on player consumes scotch"
+    : 
+      - "cast confusion duration:10s"
+    ? "on player consumes shirley_temple"
+    : 
+      - "cast dolphins_grace duration:10s"
+    ? "on player consumes vodka_redbull"
+    : 
+      - "cast fast_digging duration:30s"
+    ? "on player consumes water_melon_soda"
+    : 
+      - "cast absorption duration:20s power:1"
+    ? "on player consumes whiskey"
+    : 
+      - "cast fire_resistance duration:45s"
+    ? "on player consumes wine"
+    : 
+      - "cast slow_falling duration:100s"
+    ? "on player drags in bartender_Inventory"
+    : 
+      - "determine cancelled"
+  type: world
+bartender_assignment: 
+  actions: 
+    ? "on assignment"
+    : 
+      - "trigger name:click state:true"
+      - "trigger name:proximity state:true radius:3"
+    ? "on enter proximity"
+    : 
+      - "narrate format:bartenderChat \"What can I get for you?\""
+      - "WAIT 1s"
+      - "inventory open d:in@bartender_Inventory"
+  debug: false
+  type: assignment
+beer: 
+  ? "display name"
+  : <&6>Beer
+  lore: 
+    - "Cold beer on a hot day, perfect"
+    - <&a>$<&f>4
+  material: "minecraft:potion:8195"
+  type: item
+bloody_mary: 
+  ? "display name"
+  : "<&4>Bloody Mary"
+  lore: 
+    - "Always servered with a drop of blood"
+    - <&a>$<&f>8
+  material: "minecraft:potion:8197"
+  type: item
+cider: 
+  ? "display name"
+  : <&9>Cider
+  lore: 
+    - "Apple cider maybe?"
+    - <&a>$<&f>5
+  material: "minecraft:potion:8195"
+  type: item
+cola: 
+  ? "display name"
+  : <&c>Cola
+  lore: 
+    - "Don't drink too many now"
+    - <&a>$<&f>2
+  material: "minecraft:potion:8194"
+  type: item
+grape_drank: 
+  ? "display name"
+  : "<&5>Grape Drank"
+  lore: 
+    - Graaaaapes
+    - <&a>$<&f>2
+  material: "minecraft:potion:8194"
+  type: item
+long_island_iced_tea: 
+  ? "display name"
+  : "<&e>Long Island Iced Tea"
+  lore: 
+    - "Sweet and sour always hit the spot"
+    - <&a>$<&f>5
+  material: "minecraft:potion:8204"
+  type: item
+manhattan: 
+  ? "display name"
+  : <&6>Manhattan
+  lore: 
+    - "A cherry to top it off"
+    - <&a>$<&f>10
+  material: "minecraft:potion:8229"
+  type: item
+margarita: 
+  ? "display name"
+  : <&2>Margarita
+  lore: 
+    - Margaritaville!
+    - <&a>$<&f>6
+  material: "minecraft:potion:8195"
+  type: item
+martini: 
+  ? "display name"
+  : <&3>Martini
+  lore: 
+    - "The elixir of quietude"
+    - <&a>$<&f>6
+  material: "minecraft:potion:8196"
+  type: item
+moonshine: 
+  ? "display name"
+  : "<&f>White Lightning"
+  lore: 
+    - "Made by a rather skeevy looking fella"
+    - <&a>$<&f>1
+  material: "minecraft:potion:8196"
+  type: item
+oatmeal_stout: 
+  ? "display name"
+  : "<&f>Oatmeal Stout"
+  lore: 
+    - "Rich, Flavorful, Delicious"
+    - <&a>$<&f>15
+  material: "minecraft:potion:8195"
+  type: item
+orange_fanta: 
+  ? "display name"
+  : "<&6>Orange Fanta"
+  lore: 
+    - "Fanta Fanta don’t you wanna"
+    - <&a>$<&f>2
+  material: "minecraft:potion:8194"
+  type: item
+pbr: 
+  ? "display name"
+  : <&e>PBR
+  lore: 
+    - "Hipster’s Choice"
+    - <&a>$<&f>5
+  material: "minecraft:potion:8195"
+  type: item
+pina_colada: 
+  ? "display name"
+  : "<&d>Pina Colada"
+  lore: 
+    - "For people who like getting caught in the rain"
+    - <&a>$<&f>5
+  material: "minecraft:potion:8259"
+  type: item
+scotch: 
+  ? "display name"
+  : <&6>Scotch
+  lore: 
+    - "This is the good stuff."
+    - <&a>$<&f>12
+  material: "minecraft:potion:8195"
+  type: item
+shirley_temple: 
+  ? "display name"
+  : "<&4>Shirley Temple"
+  lore: 
+    - "Always garnished with a maraschino cherry"
+    - <&a>$<&f>5
+  material: "minecraft:potion:8193"
+  type: item
+vodka_redbull: 
+  ? "display name"
+  : "<&c>Vodka Redbull"
+  lore: 
+    - "Oh jeez, 4 will hype you up"
+    - <&a>$<&f>6
+  material: "minecraft:potion:8235"
+  type: item
+water: 
+  ? "display name"
+  : <&b>Water
+  lore: 
+    - "Bland. Old. Water."
+    - <&a>$<&f>0
+  material: 373
+  type: item
+whiskey: 
+  ? "display name"
+  : <&6>Whiskey
+  lore: 
+    - Firewater
+    - <&a>$<&f>10
+  material: "minecraft:potion:8297"
+  type: item
+wine: 
+  ? "display name"
+  : <&5>Wine
+  lore: 
+    - "Old squished up grapes"
+    - <&a>$<&f>14
+  material: "minecraft:potion:8197"
+  type: item
